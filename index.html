@@ -6,16 +6,33 @@
 		background-color: #000;
 		width: 100%;
 		height: 100vh;
+		overflow: hidden;
 	}
+
+
+.center_page {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
 	img {
 		width: 300px;
 		height: auto;
 		display: inline-block;
-		position: absolute;
-		left: 50%;
-		top: 50%;
-		transform: translate(-50%, -50%);
+		position: relative;
+		animation: fall .5s ease-in-out;
 	}
+
+
+@keyframes fall {
+  0% { top: -100vh }
+  60% { top: 0 }
+  80% { top: -20px }
+  100% { top: 0 }
+}
+
 
 
 </style>
@@ -24,6 +41,12 @@
 	<title>Webdeveloper</title>
 </head>
 <body>
-	<img src="logo.png" alt="Logo">
+
+<div class="center_page">
+	<img src="logo.png" alt="Logo">	
+</div>
+
+
+
 </body>
 </html>
