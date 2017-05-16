@@ -22,15 +22,15 @@
 		height: auto;
 		display: inline-block;
 		position: relative;
-		animation: fall .5s ease-in-out;
+		animation: fall 2s ease;
 	}
 
 
 @keyframes fall {
-  0% { top: -100vh }
+  0% { top: -150vh; opacity: 0; }
   60% { top: 0 }
   80% { top: -20px }
-  100% { top: 0 }
+  100% { top: 0; opacity: 1; }
 }
 
 
